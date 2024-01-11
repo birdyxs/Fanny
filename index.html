@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Fanny</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html><head>
+<title>Fanny</title>
+<script type="text/javascript"
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+
+$('a.poplight[href^=#]').click(function() {
+var popID = $(this).attr('rel'); 
+var popURL = $(this).attr('href'); size
+var query= popURL.split('?');
+var dim= query[1].split('&');
+var popWidth = dim[0].split('=')[1]; 
+$('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"></a>');
+var popMargTop = ($('#' + popID).height() + 80) / 2;
+var popMargLeft = ($('#' + popID).width() + 80) / 2;
+
+$('#' + popID).css({
+'margin-top' : -popMargTop,
+'margin-left' : -popMargLeft
+});
+$('body').append('<div id="fade"></div>');
+$('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); 
+return false;
+});
+$('a.close, #fade').live('click', function() {
+$('#fade , .popup_block').fadeOut(function() {
+$('#fade, a.close').remove(); 
+});
+return false;
+});
+});
+</script>
+</head>
+<script src="https://kit.fontawesome.com/cb659a95ed.js" crossorigin="anonymous"></script>
+ 
+<script>
+(function($){
+$(document).ready(function(){
+$("a[title]").style_my_tooltips({
+tip_follows_cursor:true,
+tip_delay_time:90,
+tip_fade_speed:600,
+attribute:"title"
+});
+});
+})(jQuery);
+</script>
+
+<script>
+(function($){
+$(document).ready(function(){
+$("button[title]").style_my_tooltips({
+tip_follows_cursor:true,
+tip_delay_time:90,
+tip_fade_speed:600,
+attribute:"title"
+});
+});
+})(jQuery);
+</script>
+
+<body>
+<div id="container">
+<div id="uppies">
+<a target="_blank" href="/"><button id="mybtn"  class="hvr-wobble-vertical" title="bym"><i class="far fa-bell"></i></button></a>
+</div>
+
+<div class="line1">
+</div>
+<div class="line2">
+</div>
+
+<div id="London" class="tabcontent">
+<div class="toptit">
+    <b>Sound<i><br>of the Drums</i></b>
+</div>
+
+<div id="pic1">
+</div>
+
+<div id="pic2">
+<div class="pic2box">
+    <div id="pagination">
+—
+<a target="_blank" href="https://youtu.be/5YqG9-ViFSg?si=BKJXtxiKq-1elx6u">✩</a> <a target="_blank" href="https://youtu.be/EXIWlRrkjKE?si=sCWi1CmwE7iqMIg">✩</a> <a target="_blank" href="https://youtu.be/RJR4GU0_WYA?si=IdbaRh4AAkizpbiK">✩</a> 
+</div>
+</div>
+</div>
+
+<div id="entries">
+
+<div class="post" id="615899048719876096">
+<div class="pinned"><a><i class="fas fa-thumbtack"></i></a></div> 
+<div class="postinfo">
+<a><i class="fas fa-circle"></i></span> </a> 
+<a><i class="fas fa-circle"></i> </a> <a></span></a>
+</div>
+<div class="ql"><i class="fas fa-quote-left"></i></div>
+<div class="titlequote">Be happy, that drives people crazy</div><div class="ql2"><i class="fas fa-quote-right"></i></div>
+<div class="source"><a class="tumblr_blog"></a></div>
+<div class="tags">
+</div>
+</div>
+  
+<div class="post2" id="649464558289911808">
+<div class="postinfo">
+<a><i class="fas fa-circle"></i></span> </a> 
+ <a><i class="fas fa-circle"></i></span></a>
+</div>
+<img class="post_media_photo image" src="https://i.imgur.com/gjmgKhw.gif" alt="image">
+
+<div class="tags">
+<i class="fas fa-hashtag"></i>: <a></span> Lili,</a> <a></span> Luce,</a> <a></span> Neox,</a> <a></span> 07 ♥</a>
+</div>
+</div> 
+
+</div>
+</div>
+</div>
+<script>
+    function openCity(evt, cityName) {
+  
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+<script>
+var modal = document.getElementById("myModal");
+
+var btn = document.getElementById("mybtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+  <script>feather.replace()</script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
